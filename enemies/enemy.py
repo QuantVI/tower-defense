@@ -11,6 +11,7 @@ class Enemy:
         self.height = height
         self.animation_count = 0
         self.health = 1
+        self.vel = 3 # velocity
         self.path = tutorial_game_path
         self.img = None
 
@@ -57,9 +58,10 @@ class Enemy:
         if self.health <= 0:
             return True
 
-z_enemy = Enemy(1,1,100,100)
 
-# check that importing path from an extra file I made, works
-# print(z_enemy.path)
-# print(z_enemy.path[10])
-# print(type(z_enemy.path[10]))
+
+# check that importing path from an extra file I made, works.
+#z_enemy = Enemy(1,1,100,100)
+#print(z_enemy.path)
+#print(z_enemy.path[10])
+#print(type(z_enemy.path[10]))

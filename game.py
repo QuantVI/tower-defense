@@ -12,7 +12,7 @@ class Game:
         self.money = 100
         self.bg = pygame.image.load(os.path.join("game_assets", "bg.png"))
         self.bg = pygame.transform.scale(self.bg, (self.width, self.height))
-        self.clicks = [] # remove later
+        # self.clicks = [] # used to record a click path for a map
     
     def run(self):
         run = True
@@ -27,9 +27,10 @@ class Game:
                 pos = pygame.mouse.get_pos()
 
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    self.clicks.append(pos)
-                    # used to get path list by clicking on bg
-                    print(self.clicks)
+                    # used to get path list by clicking on a background
+                    # self.clicks.append(pos)
+                    # print(self.clicks)
+                    pass
 
 
             self.draw()
@@ -39,8 +40,9 @@ class Game:
     def draw(self):
         self.win.blit(self.bg, (0,0))
 
-        for p in self.clicks:
-            pygame.draw.circle(self.win, (255,0,0), (p[0], p[1]), 5, 0)
+        # used to get a display dots for a pth on the background
+        #for p in self.clicks:
+            #pygame.draw.circle(self.win, (255,0,0), (p[0], p[1]), 5, 0)
 
         pygame.display.update()
 
