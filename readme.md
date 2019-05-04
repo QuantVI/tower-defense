@@ -8,6 +8,6 @@
 - different enemy health
 - main menu
 
-30:03 - 2019-05-04
+2019-05-04 @ 30:03  
     + game.py
     + enemy.py
