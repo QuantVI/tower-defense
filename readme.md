@@ -7,3 +7,7 @@
 - finer determined enemy path(s)
 - different enemy health
 - main menu
+
+30:03 - 2019-05-04
+    + game.py
+    + enemy.py
