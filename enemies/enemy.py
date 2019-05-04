@@ -1,4 +1,5 @@
 import pygame
+from game_paths import tutorial_game_path
 
 class Enemy:
     imgs = []
@@ -10,7 +11,7 @@ class Enemy:
         self.height = height
         self.animation_count = 0
         self.health = 1
-        self.path = []
+        self.path = tutorial_game_path
         self.img = None
 
     def draw(self, win):
@@ -55,3 +56,10 @@ class Enemy:
         self.health -= val
         if self.health <= 0:
             return True
+
+z_enemy = Enemy(1,1,100,100)
+
+# check that importing path from an extra file I made, works
+# print(z_enemy.path)
+# print(z_enemy.path[10])
+# print(type(z_enemy.path[10]))
